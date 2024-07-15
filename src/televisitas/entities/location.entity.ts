@@ -7,13 +7,13 @@ export class Location {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
-    @Column('text', {unique: true})
+    @Column('text')
     dormitory: string;
 
-    @Column('text', {unique: true})
+    @Column('text')
     module: string;
 
-    @Column('text')
+    @Column('text', {unique: true})
     description: string;
 
     @OneToOne( () => Televisita)
